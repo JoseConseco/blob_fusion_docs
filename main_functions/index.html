@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Modeling Tools - Blob Fusion Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Modeling Tools";
+        var mkdocs_page_input_path = "main_functions.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Blob Fusion Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Modeling Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-use">How To use</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hotkeys">Hotkeys</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#duplicate-extrude-divide">Duplicate, Extrude, Divide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#free-move-vs-fk">Free Move vs FK</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connect">Connect</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mute-blobs">Mute Blobs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#separate-selected">Separate Selected</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#armature-generation">Armature Generation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#blob-blending">Blob Blending</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finalize-blob">Finalize Blob</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../performance_symmetry/">Symmetry and Performance</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Blob Fusion Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Modeling Tools</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="functionality">Functionality<a class="headerlink" href="#functionality" title="Permanent link">&para;</a></h2>
+<h4 id="how-to-use">How To use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h4>
+<p><img alt="Blob Fusion" src="../img/BlobFusionBanner2.jpg" />
+<em>Blob Fusion Panel is located in 'Tools' Tab (right sidebar)</em></p>
+<p>Blobs are visible only inside Blob Domain object. To add domain volume:</p>
+<ul>
+<li>Go to right sidebar (N) -&gt; Tools Tab -&gt; Blob Fusion Panel -&gt; Click [+] icon (Add Blob Domain)</li>
+</ul>
+<p>Workspace Tool will be automatically switched to <strong>'Blob Fusion'</strong> - this overrides some hotkeys to the ones listed below</p>
+<h4 id="hotkeys">Hotkeys<a class="headerlink" href="#hotkeys" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shift+A</td>
+<td>Add Menu Blob - this will be first thing you will want to use</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Extrude</td>
+</tr>
+<tr>
+<td>Shift+D</td>
+<td>Duplicate Blob(s)</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Connect</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Subdivide segment</td>
+</tr>
+<tr>
+<td>Ctrl + MMB Scroll</td>
+<td>Select adjacent Blobs</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Rip/Separate Selected</td>
+</tr>
+<tr>
+<td>Shift+G</td>
+<td>Select Child Blobs, Select Blobs by Type</td>
+</tr>
+<tr>
+<td>Alt+B</td>
+<td>Adjust Blob Blend factor</td>
+</tr>
+<tr>
+<td>Ctrl+B</td>
+<td>Blob Parameters Popup</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Toggle Mute Blob(s)</td>
+</tr>
+<tr>
+<td>Alt+M</td>
+<td>Unmute All</td>
+</tr>
+<tr>
+<td>X\Del</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>Alt+S</td>
+<td>Unify Scale - makes empty Round</td>
+</tr>
+<tr>
+<td>Shift+V</td>
+<td>Slide Empty towards adjacent Node Ending/Parent</td>
+</tr>
+</tbody>
+</table>
+<h4 id="duplicate-extrude-divide">Duplicate, Extrude, Divide<a class="headerlink" href="#duplicate-extrude-divide" title="Permanent link">&para;</a></h4>
+<ul>
+<li>You can <strong>Duplicate</strong> or <strong>Extrude</strong> any selected Blob (sphere or capsule).</li>
+<li><strong>Divide</strong> only works on Capsule Blobs</li>
+</ul>
+<video style="width:100%" controls>
+  <source src="../img/extrude_divide.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Duplicate, Extrued and Subdivide Blobs are the core commands for modeling with Blob Fusion</em></p>
+<h4 id="free-move-vs-fk">Free Move vs FK<a class="headerlink" href="#free-move-vs-fk" title="Permanent link">&para;</a></h4>
+<p>When you create Blobs, add-on will automatically generate a child - parent relationships. It can be disabled by pressing 'Free Move Mode'</p>
+<video style="width:100%" controls>
+  <source src="../img/free_vs_fk.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Forward Kinematics Mode vs Free Move Mode</em></p>
+<h4 id="connect">Connect<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/connect_blobs.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>You can connect two blobs together (F-key), unless they are defining Capsule Blob already</em></p>
+<h4 id="mute-blobs">Mute Blobs<a class="headerlink" href="#mute-blobs" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/mute_blobs.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Use Shift+G menu to select Sphere Blobs, then M will mute them. Alt+M - unmute all</em></p>
+<h4 id="separate-selected">Separate Selected<a class="headerlink" href="#separate-selected" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/separate_blobs.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Hands separation, can help in locally increasing model resolution</em></p>
+<blockquote>
+<p><strong>Note</strong> - You can revert this operation using <strong>Join Domain</strong> operator. It will merge hands back into body Blobs. <strong>Join</strong> is located below Separate "Selected Button"</p>
+</blockquote>
+<h4 id="armature-generation">Armature Generation<a class="headerlink" href="#armature-generation" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/armature_generation.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Hierarchical structure on Blobs can be used to generate armature from Blob Domain Objects</em></p>
+<h4 id="blob-blending">Blob Blending<a class="headerlink" href="#blob-blending" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/blob_blend.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Influence of Blob Blending on mesh look</em></p>
+<h4 id="finalize-blob">Finalize Blob<a class="headerlink" href="#finalize-blob" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/finalize_blob.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Finalize will create mesh copy of active Blob Domain, that can be used for sculpting</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../performance_symmetry/" class="btn btn-neutral float-right" title="Symmetry and Performance">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../performance_symmetry/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

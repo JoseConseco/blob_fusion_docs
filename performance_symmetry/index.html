@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Symmetry and Performance - Blob Fusion Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Symmetry and Performance";
+        var mkdocs_page_input_path = "performance_symmetry.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Blob Fusion Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../main_functions/">Modeling Tools</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Symmetry and Performance</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fast-transform">Fast Transform</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#symmetry-with-mirror-mod">Symmetry with Mirror Mod</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#symmetry-apply">Symmetry Apply</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#symmetry">Symmetry</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Blob Fusion Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Symmetry and Performance</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<p>Two biggest factors that influence performance, when modeling with Blobs are:</p>
+<ul>
+<li>Domain resolution - lower is faster but gives less detail</li>
+<li>Domain size - it is best to keep the size as small/close to character as possible</li>
+</ul>
+<p>There is also third factor - less obvious - uniformly scaled Empties, will give better performance, than non-uniform Blobs.
+Use <strong>Alt+S</strong> - to unify object Scale in X,Y and Z direction (works only when Blob Fusion Workspace tool is Active)</p>
+<p><img alt="Uniform vs non-unoform scale" src="../img/simplify_threshold.jpg" />
+<em>Left capsule tends to be slower when calculating Signed Distance Field</em></p>
+<h4 id="fast-transform">Fast Transform<a class="headerlink" href="#fast-transform" title="Permanent link">&para;</a></h4>
+<p>Available from Utilities popup menu.</p>
+<video style="width:100%" controls>
+  <source src="../img/fast_transform.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Fast Transform will increase performance by temporarily reducing blobs resolution, when modeling blobs</em></p>
+<h4 id="symmetry-with-mirror-mod">Symmetry with Mirror Mod<a class="headerlink" href="#symmetry-with-mirror-mod" title="Permanent link">&para;</a></h4>
+<p>To reduce Domain Size the most - instead of using <a href="./#symmetry-blob">Symmetry Button</a> - you can remove left half of character, and use mirror modifier.
+This way only half of volume is calculated.</p>
+<video style="width:100%" controls>
+  <source src="../img/symmetry_mirror_mod.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Removing left side of character, by dragging Domain Blob object corners verts. After that and using mirror mod navigation is smoother</em></p>
+<h4 id="symmetry-apply">Symmetry Apply<a class="headerlink" href="#symmetry-apply" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+  <source src="../img/symmetry_apply_blob.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Apply Symmetry allows to model non symmetrical character</em></p>
+<blockquote>
+<p><strong>Note</strong> - This operation will double the Blobs count, thus editing Blobs may become slow for complicated characters!</p>
+</blockquote>
+<h4 id="symmetry">Symmetry<a class="headerlink" href="#symmetry" title="Permanent link">&para;</a></h4>
+<p>One click solution for making the character symmetrical.</p>
+<video style="width:100%" controls>
+  <source src="../img/symmetry_blob.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Symmetry button is located next to resolution slider</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../main_functions/" class="btn btn-neutral float-left" title="Modeling Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../main_functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
