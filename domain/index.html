@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Blob Domain - Blob Fusion Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Blob Domain";
+        var mkdocs_page_input_path = "domain.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Blob Fusion Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Blob Domain</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#auto-fit-domain-size">Auto Fit Domain Size</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manually-resizing-domain">Manually Resizing Domain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#locking-domain-face">Locking Domain Face</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../main_functions/">Modeling Tools</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../performance_symmetry/">Symmetry and Performance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../library/">Blobs Library</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Blob Fusion Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Blob Domain</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="blob-domain">Blob Domain<a class="headerlink" href="#blob-domain" title="Permanent link">&para;</a></h3>
+<p>Blob Domain is <strong>volumetric box that contains all the sphere and capsule blobs</strong>. It is used to define the space in which the blobs (signed distance fields) are calculated and then meshed.<br>
+ In general, it's a good idea to <strong>keep domain size and resolution as small as possible</strong>, as calculating the signed distance field is an expensive operation. However, in some cases it may be necessary to increase the resolution to achieve more accurate results.</p>
+<video style="width:100%" controls>
+  <source src="../img/domain_res.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Performance difference for high vs low resolution domain</em></p>
+<h4 id="auto-fit-domain-size">Auto Fit Domain Size<a class="headerlink" href="#auto-fit-domain-size" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+    <source src="../img/auto_domain_fit.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+<p><em><strong>Auto Fit Domain Size</strong> - This option allows the domain to automatically resize itself so that when Blobs are moved, it contains all of the blobs that are in the domain</em></p>
+<h4 id="manually-resizing-domain">Manually Resizing Domain<a class="headerlink" href="#manually-resizing-domain" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+    <source src="../img/domain_manual_resize.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+<p><em><strong>Manually Resizing Domain</strong> - You can manually resize domain by dragging <code>X</code> gizmo - placed on each side of domain</em></p>
+<blockquote>
+<p><strong>Note</strong> - When 'Auto Fit Domain Size' is enabled, your manual adjustments will be overridden by the 'auto-fit' feature. To prevent this, disable 'Auto Fit Domain Size' or use 'Lock Domain Face' feature (see below)</p>
+</blockquote>
+<h4 id="locking-domain-face">Locking Domain Face<a class="headerlink" href="#locking-domain-face" title="Permanent link">&para;</a></h4>
+<p>When 'Auto Fit Domain Size' is enabled, you can prevent domain from moving in some directions by pressing little box gizmo (next to each <code>X</code>). Useful when:</p>
+<ul>
+<li>you do not want to draw mesh below floor,</li>
+<li>to limit domain calculation only to right side of character (for example when using Mirror modifier to create left side of character - way faster than calculating SDF for both sides)</li>
+</ul>
+<video style="width:100%" controls>
+    <source src="../img/domain_face_lock.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+<p><em><strong>Domain Face Lock</strong> - In video above I locked left side off Domain, so that only right side of character is generated. Left side can be generated using Mirror modifier</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../main_functions/" class="btn btn-neutral float-right" title="Modeling Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../main_functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

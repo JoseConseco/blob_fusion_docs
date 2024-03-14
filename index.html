@@ -8,7 +8,7 @@
     <title>Blob Fusion Documentation</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="extra.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -35,7 +34,7 @@
           <a href="." class="icon icon-home"> Blob Fusion Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -44,9 +43,9 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#blob-fusion-documentation">Blob Fusion Documentation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#blob-fusion_1">Blob Fusion</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#features-list">Features list:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#video-tutorial">Video Tutorial</a>
     </li>
@@ -60,11 +59,19 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="domain/">Blob Domain</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="main_functions/">Modeling Tools</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="performance_symmetry/">Symmetry and Performance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="library/">Blobs Library</a>
                 </li>
               </ul>
       </div>
@@ -80,8 +87,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Home</li>
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -91,18 +98,23 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="blob-fusion">Blob Fusion<a class="headerlink" href="#blob-fusion" title="Permanent link">&para;</a></h1>
-<h3 id="blob-fusion-documentation"><a href="https://bartoszstyperek.gumroad.com/l/blob_fusion">Blob Fusion</a> Documentation<a class="headerlink" href="#blob-fusion-documentation" title="Permanent link">&para;</a></h3>
-<p>Blob Fusion is Blender add-on targeted for character/creature base-meshes creation. It can be thought as mix of ZSpheres with Metaballs, combining best of both worlds. I wished for this kind of workflow being possible, for quite some time.</p>
+<video style="width:100%" controls>
+  <source src="./img/BlobBreakdown.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<h3 id="blob-fusion_1">Blob Fusion<a class="headerlink" href="#blob-fusion_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://bartoszstyperek.gumroad.com/l/blob_fusion">Blob Fusion</a> is add-on for Blender 3.6 and 4.x, targeted for base-meshes creation. It can be thought as <strong>mix of ZSpheres with Metaballs</strong> (Signed Distance Fields), combining best of both worlds. I wished for this kind of workflow being possible, for quite some time.</p>
 <video style="width:100%" controls>
   <source src="./img/blob_fusion_edit.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-<p>Add-on requires Blender 3.3 or above (at the moment Blender 3.3 is still beta, may be unstable).</p>
-<h3 id="features-list">Features list:<a class="headerlink" href="#features-list" title="Permanent link">&para;</a></h3>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Model your characters using two primitives: <strong>Sphere</strong> and <strong>Round cone</strong> Blobs</li>
 <li>Auto-generated hierarchy of objects (rig like) is created, when adding new Blob</li>
+<li>Library of presets for quick start (human, animal, etc.),</li>
 <li>Blobs blending control that allows to get organic results</li>
 <li>One click Symmetrical setup,</li>
 <li>Easy to use: extrude, subdivide, connect and duplicate is all you need to model</li>
@@ -110,13 +122,15 @@ Your browser does not support the video tag.
 </ul>
 <h3 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">&para;</a></h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Fzr1qU4J6Qw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p><a href="https://discord.gg/cxZDbqH">Add-on support channel</a></p>
+<p><em>Blob Fusion 1.0 release video where basics of blobs modeling are shown (extruding, subdividing, connecting, duplicating blobs etc.)</em></p>
+<p><br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eQkNFwdcpK8?si=Bv_CetENFAFsssNf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><em>Blob Fusion 1.5 Update video where I show new Dynamic Bounding Box and library of presets features</em></p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
 <p>To install Blob Fusion you need zip file from your <a href="https://gumroad.com/">Gumroad</a> account.
 Then, inside Blender, go to:</p>
 <ul>
-<li>Edit -&gt; Preferences -&gt; Add-ons, and click '<strong>Install</strong>' button.</li>
+<li>Edit &gt; Preferences &gt; Add-ons, and click '<strong>Install</strong>' button.</li>
 </ul>
 <p><img alt="Blob Fusion Installation" src="img/blob_fusion_installation.jpg" /></p>
 <p>And navigate to <strong>BlobFusion.x.zip</strong>  file location.</p>
@@ -137,7 +151,7 @@ In new version is found, press '<strong>Update add-on</strong>' button, wait few
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="main_functions/" class="btn btn-neutral float-right" title="Modeling Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="domain/" class="btn btn-neutral float-right" title="Blob Domain">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -161,24 +175,25 @@ In new version is found, press '<strong>Update add-on</strong>' button, wait few
     
     
     
-      <span><a href="main_functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="domain/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme_extra.js" defer></script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 1.3.1
-Build Date UTC : 2022-08-10 21:31:54.258562+00:00
+MkDocs version : 1.5.3
+Build Date UTC : 2024-03-14 18:18:06.594208+00:00
 -->

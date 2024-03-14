@@ -8,7 +8,7 @@
     <title>Symmetry and Performance - Blob Fusion Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../extra.css" rel="stylesheet" />
     
       <script>
@@ -18,12 +18,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -35,7 +34,7 @@
           <a href=".." class="icon icon-home"> Blob Fusion Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -43,6 +42,10 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../domain/">Blob Domain</a>
                 </li>
               </ul>
               <ul>
@@ -63,6 +66,10 @@
     </ul>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../library/">Blobs Library</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
@@ -76,8 +83,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Symmetry and Performance</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Symmetry and Performance</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -104,7 +111,7 @@ Your browser does not support the video tag.
 </video>
 <p><em>Fast Transform will increase performance by temporarily reducing blobs resolution, when modeling blobs</em></p>
 <h4 id="symmetry-with-mirror-mod">Symmetry with Mirror Mod<a class="headerlink" href="#symmetry-with-mirror-mod" title="Permanent link">&para;</a></h4>
-<p>To reduce Domain Size the most - instead of using <a href="./#symmetry-blob">Symmetry Button</a> - you can remove left half of character, and use mirror modifier.
+<p>To reduce Domain Size the most - instead of using <a href="./#symmetry">Symmetry Button</a> - you can remove left half of character, and use mirror modifier.
 This way only half of volume is calculated.</p>
 <video style="width:100%" controls>
   <source src="../img/symmetry_mirror_mod.mp4" type="video/mp4">
@@ -121,7 +128,7 @@ Your browser does not support the video tag.
 <p><strong>Note</strong> - This operation will double the Blobs count, thus editing Blobs may become slow for complicated characters!</p>
 </blockquote>
 <h4 id="symmetry">Symmetry<a class="headerlink" href="#symmetry" title="Permanent link">&para;</a></h4>
-<p>One click solution for making the character symmetrical.</p>
+<p>One click solution for making the character symmetrical. I would recommend using Mirror modifier though, as it is more efficient - since you cut domain size in half.</p>
 <video style="width:100%" controls>
   <source src="../img/symmetry_blob.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -132,6 +139,7 @@ Your browser does not support the video tag.
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../main_functions/" class="btn btn-neutral float-left" title="Modeling Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../library/" class="btn btn-neutral float-right" title="Blobs Library">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -157,16 +165,19 @@ Your browser does not support the video tag.
       <span><a href="../main_functions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
+      <span><a href="../library/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
