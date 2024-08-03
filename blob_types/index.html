@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Blob Types - Blob Fusion Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Blob Types";
+        var mkdocs_page_input_path = "blob_types.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Blob Fusion Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../domain/">Blob Domain</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Blob Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#blending-blobs">Blending Blobs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subtracting-blobs">Subtracting Blobs</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../main_functions/">Modeling Tools</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../performance_symmetry/">Symmetry and Performance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../library/">Blobs Library</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Blob Fusion Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Blob Types</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="blob-types">Blob Types<a class="headerlink" href="#blob-types" title="Permanent link">&para;</a></h3>
+<p>Since release of Blob Fusion 1.6, blob fusion supports few primitives:</p>
+<ul>
+<li>Sphere - which cane be extruded into capsule</li>
+<li>Cube</li>
+<li>Cylinder</li>
+<li>Torus</li>
+</ul>
+<video style="width:100%" controls>
+  <source src="../img/blob_types.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><em>Demo of all primitives. The sphere/capsule is the most useful IMO, for blocking out characters</em></p>
+<h4 id="blending-blobs">Blending Blobs<a class="headerlink" href="#blending-blobs" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+    <source src="../img/adjusting_blend.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+<p><em><strong>Blending Blobs [Alt+B]</strong> - is great way to get organic result quickly (also try using Ctrl+B popup panel to see which methoud you like the most)</em></p>
+<h4 id="subtracting-blobs">Subtracting Blobs<a class="headerlink" href="#subtracting-blobs" title="Permanent link">&para;</a></h4>
+<video style="width:100%" controls>
+    <source src="../img/subtract_blobs.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+<p><em><strong>Subtracting Blobs</strong> with [-] key can be used for more hard surface detail</em></p>
+<p>One thing to note, during subtracting blobs, the order in which blobs were added to scene matters. The <strong>last blob can cut previous blobs</strong>, but this is not true in reverse. More info about reordering the blobs and subtracting them in video below (11:44 timestamp)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eQkNFwdcpK8?si=gJMr_ZsUWxZnxK-Z&amp;start=704" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>In the future I could add intersect mode.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../domain/" class="btn btn-neutral float-left" title="Blob Domain"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../main_functions/" class="btn btn-neutral float-right" title="Modeling Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../domain/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../main_functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

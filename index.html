@@ -41,7 +41,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#blob-fusion_1">Blob Fusion</a>
     </li>
@@ -53,6 +53,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#updating">Updating</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extension">Extension</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#support">Support</a>
     </li>
     </ul>
@@ -60,6 +62,10 @@
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="domain/">Blob Domain</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="blob_types/">Blob Types</a>
                 </li>
               </ul>
               <ul>
@@ -144,6 +150,18 @@ In new version is found, press '<strong>Update add-on</strong>' button, wait few
 <blockquote>
 <p><strong>Note</strong> - Sometimes I upload smaller, incremental updates, without version bump. In that case, even if you have the latest version of Blob Fusion, you may try to update anyway - using <strong>Reinstall Current Version</strong></p>
 </blockquote>
+<h3 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h3>
+<p>Since <strong>version 1.6+</strong> Blob Fusing supports only <strong>Blender 4.2+</strong>. It was also converted from addon to <a href="https://docs.blender.org/manual/en/latest/editors/preferences/extensions.html">Extension</a>, which is a new way of handling add-ons in Blender 4.2.<br>
+Blob Fusion continues to use custom 'old' auto-updater (I may switch to Blender extension updater in future).</p>
+<p><strong>There is one issue though</strong>, if you update old BFusion 1.5.x <strong>add-on</strong> to new 1.6+ <strong>Extension</strong>, using built-in auto-updater, the new extension will stay in same <code>./addons/</code> folder (auto-updater only updates the files - it does not move them around to different folders).</p>
+<p><strong>THE FIX:</strong><br>
+<img alt="Blob Fusion Update" src="img/bfusion_extension.jpg" />
+<em>After auto-updating move BFusion 1.6 Extension from: <code>./blender/4.2/scripts/addons/</code> folder to <code>blender/4.2/extensions/user_default/</code></em></p>
+<blockquote>
+<p><strong>Note</strong> - Info where to find yours addons folder (it depends on your OS), can be found <a href="https://docs.blender.org/manual/en/4.1/advanced/blender_directory_layout.html#platform-dependent-paths">here</a></p>
+</blockquote>
+<p><strong>OR:</strong><br>
+Remove Blob Fusion 1.5.x add-on, and then install new Blob Fusion 1.6+ Extension from zip file - like it is explained in <a href="https://docs.blender.org/manual/en/latest/editors/preferences/extensions.html#bpy-ops-extensions-package-install-files">Blender Docs</a>. You will have to grab the extension zip file from your <a href="https://gumroad.com/">Gumroad</a> account.</p>
 <h3 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h3>
 <p><strong>For support or bug reports use <a href="https://discord.gg/cxZDbqH">this discord server</a></strong>.</p>
 <!-- > **Note** -Do no use group offset feature, form group panel. Group offset is used by script for calculating data, and it should be never edited by hand. If you do so, group offset will be calculated in wrong way, which will result in incorrect display of group instances. -->
@@ -194,6 +212,6 @@ In new version is found, press '<strong>Update add-on</strong>' button, wait few
 </html>
 
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2024-03-14 18:18:06.594208+00:00
+MkDocs version : 1.6.0
+Build Date UTC : 2024-08-03 14:16:55.475393+00:00
 -->
